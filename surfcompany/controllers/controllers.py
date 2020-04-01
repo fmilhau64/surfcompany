@@ -2,6 +2,7 @@
 from odoo import http
 
 class Surfcompany(http.Controller):
+    
     @http.route('/surfcompany/surfcompany/', auth='public')
     def index(self, **kw):
         return "Hello, world"

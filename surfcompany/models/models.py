@@ -12,4 +12,5 @@ class surfcompany(models.Model):
 
     @api.depends('value')
     def _value_pc(self):
-        self.value2 = float(self.value) / 100
+        if self.value != 0:
+            self.value2 = float(self.value) / 100
